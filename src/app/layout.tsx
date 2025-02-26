@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import FullPageWrapper from '@/components/fullpage/page';
-import './globals.css';
+import FullPageWrapper from "@/app/fullpage/page";
+import "./globals.css";
+// import Header from "@/components/ui/header";
 
 export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
@@ -9,6 +10,7 @@ export default function RootLayout({}: Readonly<{
   return (
     <html lang="en">
       <body>
+        {/* <Header /> */}
         <FullPageWrapper />
       </body>
     </html>

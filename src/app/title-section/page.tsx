@@ -1,0 +1,96 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Header from "@/components/ui/header";
+import { ChevronDown } from "lucide-react";
+
+const Title = () => {
+  const [showLogo, setShowLogo] = useState(true);
+
+  // 일정 시간 후 로고가 사라지도록 설정
+  useEffect(() => {
+    const timer = setTimeout(() => setShowLogo(false), 1800); // 3초 후 사라짐
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="relative flex items-center justify-center bg-neutral-900 overflow-hidden h-screen ">
+      <Header />
+      {/* 하얀 원 애니메이션 */}
+      <motion.div
+        className="absolute bg-white rounded-full shadow-2xl"
+        initial={{ width: 150, height: 150, borderRadius: "100%" }}
+        animate={{ width: "150vw", height: "150vw", borderRadius: "0%" }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      />
+
+      {/* 로고 애니메이션 */}
+      <AnimatePresence>
+        {showLogo && (
+          <motion.div
+            className="absolute z-10 flex flex-col items-center mt-14"
+            initial={{ y: 50, opacity: 0, scale: 0.8 }}
+            animate={{ y: [-20, -40], opacity: 0.8, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }} // 사라질 때 효과 적용
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <Image
+              src="/assets/logo.png"
+              alt="Logo"
+              width={100}
+              height={50}
+              priority
+              className="drop-shadow-lg"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="flex flex-col gap-40 justify-center items-center ">
+        {/* RGT 텍스트 애니메이션 */}
+        <motion.p
+          className="absolute flex text-blue-900 lg:text-[120px] md:text-[60px] sm:text-[50px] font-extrabold lg:mb-40 sm:mb-50 text-center hover:text-opacity-80 cursor-pointer"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+          style={{
+            textShadow:
+              "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
+          }}
+          onClick={() => window.open("https://rgtinc.imweb.me/", "_blank")}
+        >
+          ROBOT GLOBAL TEAM
+        </motion.p>
+
+        {/* ONLINE BOOKSTORE 3D 텍스트 애니메이션 */}
+        <motion.p
+          className="absolute flex text-blue-900 lg:text-[136px] md:text-[64px] sm:text-[50px] font-extrabold mt-24 text-center hover:text-opacity-80 cursor-pointer"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+          style={{
+            textShadow:
+              "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
+          }}
+          onClick={() => window.open("#", "_blank")}
+        >
+          ONLINE BOOKSTORE
+        </motion.p>
+      </div>
+
+      {/* 스크롤 유도 애니메이션 */}
+      <motion.div
+        className="absolute bottom-10 animate-bounce z-10"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
+        <ChevronDown className="size-10 text-black" />
+      </motion.div>
+    </div>
+  );
+};
+
+export default Title;

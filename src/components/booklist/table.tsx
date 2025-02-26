@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Book } from '@/types/book';
+import { Book } from "@/types/book";
 import {
   Button,
   Table,
@@ -9,9 +9,9 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/index';
-import { Star } from 'lucide-react';
-import Link from 'next/link';
+} from "@/components/ui/index";
+import { Star } from "lucide-react";
+import Link from "next/link";
 
 type BookTableProps = {
   books: Book[];
@@ -21,8 +21,8 @@ type BookTableProps = {
 export default function BookTable({ books, onDelete }: BookTableProps) {
   return (
     <Table className="w-full">
-      <TableHeader className="w-full">
-        <TableRow className="w-full">
+      <TableHeader className="w-full border-b-2 border-blue-900">
+        <TableRow className="w-full ">
           <TableHead className="w-1/4 text-center items-center">제목</TableHead>
           <TableHead className="w-1/4 text-center">저자</TableHead>
           <TableHead className="w-1/4 text-center">평점</TableHead>
