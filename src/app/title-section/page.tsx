@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/ui/header/header";
 import { ChevronDown } from "lucide-react";
 import Video from "@/components/title/video";
 
@@ -18,7 +17,6 @@ const Title = () => {
 
   return (
     <div className="relative flex items-center justify-center bg-neutral-900 overflow-hidden h-screen ">
-      <Header />
       <Video />
       {/* 하얀 원 애니메이션 */}
 
@@ -57,23 +55,23 @@ const Title = () => {
       </AnimatePresence>
       <div className="flex flex-col gap-40 justify-center items-center sm:w-[375px]">
         {/* RGT 텍스트 애니메이션 */}
-        <motion.p
-          className="absolute flex text-blue-900 lg:text-[120px] md:text-[60px] sm:text-[50px] font-extrabold lg:mb-40 sm:mb-50 text-center  cursor-pointer"
+        {/* <motion.p
+          className="absolute flex text-blue-900 lg:text-[120px] md:text-[60px] sm:text-[50px] font-extrabold lg:mb-40 sm:mb-70 text-center bg-black cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
-          style={{
-            textShadow:
-              "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
-          }}
+          // style={{
+          //   textShadow:
+          //     "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
+          // }}
           onClick={() => window.open("https://rgtinc.imweb.me/", "_blank")}
         >
           ROBOT GLOBAL TEAM
-        </motion.p>
+        </motion.p> */}
 
         {/* ONLINE BOOKSTORE 3D 텍스트 애니메이션 */}
-        <motion.p
-          className="absolute flex text-blue-900 lg:text-[136px] md:text-[64px] sm:text-[50px] font-extrabold mt-24 text-center  cursor-pointer"
+        <motion.div
+          className="absolute font-didot flex flex-col lg:text-[80px] md:text-[70px] mt-50 text-center cursor-pointer w-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
@@ -83,8 +81,13 @@ const Title = () => {
           }}
           onClick={() => window.open("#", "_blank")}
         >
-          ONLINE BOOKSTORE
-        </motion.p>
+          <div className="text-center flex-col flex font-black text-blue-800 w-full">
+            ROBOT GLOBAL TEAM
+          </div>
+          <div className="text-center flex flex-col font-black text-blue-800 w-full">
+            ONLINE BOOK_STORE
+          </div>
+        </motion.div>
       </div>
 
       {/* 스크롤 유도 애니메이션 */}

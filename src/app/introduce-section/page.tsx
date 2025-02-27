@@ -20,7 +20,7 @@ const BookstoreIntro = () => {
         className="group px-6 py-3 text-white hover:text-gray-400 transition flex flex-col items-center gap-4 z-10 mb-8 sm:mb-12"
         onClick={() => (window.location.href = "/main#booklist-section")}
       >
-        <span className="text-lg">지금 탐색하기</span>
+        <span className="text-lg ">지금 탐색하기</span>
         <BookOpen className="size-12 text-gray-100 group-hover:text-gray-400" />
       </button>
 
@@ -39,7 +39,7 @@ const BookstoreIntro = () => {
             repeat: Infinity,
           }}
         >
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center font-didot">
             <span>ONLINE</span>
             <span>BOOKSTORE</span>
           </div>
@@ -51,7 +51,7 @@ const BookstoreIntro = () => {
 
       {/* 설명 텍스트 */}
       <div className="flex justify-center items-center sm:pl-24">
-        <div className="text-white mt-6 sm:mt-8 flex flex-col justify-center items-center z-10 ">
+        <div className="text-white mt-6 sm:mt-8 flex flex-col justify-center items-center z-10 font-didot">
           <span className="text-2xl sm:text-[50px] font-bold bg-gradient-to-r from-blue-300 to-gray-200 bg-clip-text text-transparent max-w-[90%] sm:max-w-[500px] leading-normal">
             Find Your Desired Books Quickly And Easily With Us.
           </span>

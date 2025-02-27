@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
-  { label: "BookLIst", href: "/main#booklist-section" },
-  { label: "NewBook", href: "/books/new" },
+  { label: "Booklist", href: "/components/booklist" },
+  { label: "Newbook", href: "/books/new" },
   { label: "Business Corporation", href: "/business" },
   { label: "About", href: "/about", hasDropdown: true },
 ];
@@ -19,7 +19,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 w-full bg-opacity-90 bg-white shadow-md z-50">
+    <header className="fixed top-0 w-full bg-opacity-90 bg-white shadow-md z-50 font-didot">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* 로고 (왼쪽 정렬) */}
         <Link href="/" className="flex items-center">

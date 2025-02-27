@@ -1,8 +1,8 @@
 // ui/index.ts
-export { Button } from './button';
-export { Card, CardHeader, CardTitle, CardContent, CardFooter } from './card';
+export { Button } from "./Button";
+export { Card, CardHeader, CardTitle, CardContent, CardFooter } from "./Card";
 // export { default as Header } from './header';
-export { Input } from './input';
+export { Input } from "./Input";
 export {
   Table,
   TableBody,
@@ -10,6 +10,6 @@ export {
   TableHead,
   TableHeader,
   TableRow,
-} from './table';
-export { Textarea } from './textarea';
-export { Pagination } from './pagination';
+} from "./Table";
+export { Textarea } from "./Textarea";
+export { Pagination } from "./Pagination";
