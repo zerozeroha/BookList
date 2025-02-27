@@ -7,8 +7,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
-  { label: "Products", href: "/products" },
-  { label: "Reference", href: "/reference" },
+  { label: "BookLIst", href: "/main#booklist-section" },
+  { label: "NewBook", href: "/books/new" },
   { label: "Business Corporation", href: "/business" },
   { label: "About", href: "/about", hasDropdown: true },
 ];

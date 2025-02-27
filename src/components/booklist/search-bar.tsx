@@ -1,7 +1,5 @@
-"use client";
-
-import { Input, Button } from "@/components/ui/index";
-import { Search } from "lucide-react"; // 돋보기 아이콘 추가
+import { Search } from "lucide-react";
+import { Input } from "../ui";
 
 interface SearchBarProps {
   search: string;
@@ -10,10 +8,14 @@ interface SearchBarProps {
 
 export default function SearchBar({ search, setSearch }: SearchBarProps) {
   return (
-    <div className="flex justify-center items-center mb-6 gap-10">
-      <span className="text-900 text-[40px] text-blue-950 ">BOOKLIST</span>
-      <div className="relative w-1/3">
-        {/* 🔍 검색 입력창 */}
+    <div className="flex items-center mb-6 px-10">
+      {/* 🔹 왼쪽 BOOKLIST */}
+      <span className="font-black text-[38px] sm:text-[24px] text-blue-950 w-full sm:w-1/3 text-left">
+        BOOKLIST
+      </span>
+
+      {/* 🔹 가운데 검색창 */}
+      <div className="relative md:w-1/3 sm:w-2/3 flex justify-center">
         <Input
           type="text"
           placeholder="책 제목 또는 저자를 입력하세요..."
@@ -21,21 +23,11 @@ export default function SearchBar({ search, setSearch }: SearchBarProps) {
           onChange={(e) => setSearch(e.target.value)}
           className="w-full p-2 pl-12 rounded-md border-2 border-blue-950"
         />
-
-        {/* 🔍 돋보기 아이콘 (입력창 안에 위치) */}
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 size-5" />
-
-        {/* 🔄 검색 초기화 버튼 (검색어가 있을 때만 표시) */}
-        {search && (
-          <Button
-            variant="outline"
-            onClick={() => setSearch("")}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 px-3 py-1 text-sm"
-          >
-            검색 초기화
-          </Button>
-        )}
       </div>
+
+      {/* 🔹 오른쪽 빈 공간 (w-1/3)으로 검색창을 중앙 정렬 */}
+      <div className="md:w-1/3 sm:w-0"></div>
     </div>
   );
 }

@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import Header from "@/components/ui/header";
+import Header from "@/components/ui/header/header";
 import { ChevronDown } from "lucide-react";
+import Video from "@/components/title/video";
 
 const Title = () => {
   const [showLogo, setShowLogo] = useState(true);
@@ -18,12 +19,19 @@ const Title = () => {
   return (
     <div className="relative flex items-center justify-center bg-neutral-900 overflow-hidden h-screen ">
       <Header />
+      <Video />
       {/* 하얀 원 애니메이션 */}
+
       <motion.div
         className="absolute bg-white rounded-full shadow-2xl"
-        initial={{ width: 150, height: 150, borderRadius: "100%" }}
-        animate={{ width: "150vw", height: "150vw", borderRadius: "0%" }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        initial={{ width: 150, height: 150, borderRadius: "100%", opacity: 1 }}
+        animate={{
+          width: "150vw",
+          height: "150vw",
+          borderRadius: "0%",
+          opacity: [1, 1, 0], // 3초 후 opacity 0
+        }}
+        transition={{ duration: 3, ease: "easeInOut" }} // 5초 동안 유지 후 서서히 사라짐
       />
 
       {/* 로고 애니메이션 */}
@@ -47,11 +55,10 @@ const Title = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      <div className="flex flex-col gap-40 justify-center items-center ">
+      <div className="flex flex-col gap-40 justify-center items-center sm:w-[375px]">
         {/* RGT 텍스트 애니메이션 */}
         <motion.p
-          className="absolute flex text-blue-900 lg:text-[120px] md:text-[60px] sm:text-[50px] font-extrabold lg:mb-40 sm:mb-50 text-center hover:text-opacity-80 cursor-pointer"
+          className="absolute flex text-blue-900 lg:text-[120px] md:text-[60px] sm:text-[50px] font-extrabold lg:mb-40 sm:mb-50 text-center  cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
@@ -66,7 +73,7 @@ const Title = () => {
 
         {/* ONLINE BOOKSTORE 3D 텍스트 애니메이션 */}
         <motion.p
-          className="absolute flex text-blue-900 lg:text-[136px] md:text-[64px] sm:text-[50px] font-extrabold mt-24 text-center hover:text-opacity-80 cursor-pointer"
+          className="absolute flex text-blue-900 lg:text-[136px] md:text-[64px] sm:text-[50px] font-extrabold mt-24 text-center  cursor-pointer"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
@@ -87,7 +94,7 @@ const Title = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2 }}
       >
-        <ChevronDown className="size-10 text-black" />
+        <ChevronDown className="size-10 text-gray-50" />
       </motion.div>
     </div>
   );
