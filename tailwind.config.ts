@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        didot: ["Didot", "serif"],
+        didot: ["Didot", "Bodoni", "Playfair Display", "serif"],
       },
       colors: {
         background: "hsl(var(--background))",

@@ -18,7 +18,7 @@ const BookstoreIntro = () => {
       {/* 버튼 */}
       <button
         className="group px-6 py-3 text-white hover:text-gray-400 transition flex flex-col items-center gap-4 z-10 mb-8 sm:mb-12"
-        onClick={() => (window.location.href = "/main#booklist-section")}
+        onClick={() => (window.location.href = "/booklist")}
       >
         <span className="text-lg ">지금 탐색하기</span>
         <BookOpen className="size-12 text-gray-100 group-hover:text-gray-400" />

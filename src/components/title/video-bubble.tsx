@@ -2,9 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 
 // ✅ 제공된 동영상 URL 목록
-const videoSources = ["/assets/bg.mp4"];
+const videoSources = ["/assets/bubble.mp4"];
 
-export default function Video() {
+export default function BubbleVideo() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [videoSrc, setVideoSrc] = useState<string | undefined>(undefined); // ✅ 초기값을 undefined로 설정
 
