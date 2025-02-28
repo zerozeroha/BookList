@@ -37,6 +37,11 @@
 
 ## 🚀 ** 화면 구상 **
 
+- NesBook 클릭시
+
+![newbook](https://github.com/user-attachments/assets/942e0249-165f-44c3-9c45-53e3994166b6)
+
+
 
 
 
