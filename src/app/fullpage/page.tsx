@@ -12,7 +12,7 @@ const FullPageWrapper: React.FC = () => {
   return (
     <div className="mx-auto w-full min-w-[375px] max-w-full">
       <ReactFullpage
-        licenseKey=""
+        licenseKey="gplv3"
         scrollingSpeed={800}
         anchors={[
           "title-section",

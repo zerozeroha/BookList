@@ -11,7 +11,7 @@ import {
   CardTitle,
   CardContent,
   CardFooter,
-} from "@/components/ui";
+} from "@/components/ui/index";
 
 interface BookFormProps {
   initialData?: {
