@@ -65,22 +65,4 @@
 | **PUT**    | `/api/books/[id]`    | 특정 책 정보 수정        |
 | **DELETE** | `/api/books/[id]`    | 특정 책 삭제             |
 
----
-
-## 🤝 **기여 방법**
-
-1. 이 프로젝트를 **Fork** 합니다.
-2. 새로운 브랜치를 생성합니다:  
-   ```bash
-   git checkout -b feature/새로운기능
-   ```
-3. 변경 사항을 커밋합니다:
-   ```bash
-   git commit -m "새로운 기능 추가"
-   ```
-4. 브랜치에 푸시합니다:
-   ```bash
-   git push origin feature/새로운기능
-   ```
-5. **Pull Request**를 생성합니다.
 
