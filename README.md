@@ -37,27 +37,6 @@
 
 ## 🚀 **설치 및 실행 방법**
 
-### 1️⃣ 레포지토리 클론
-
-```bash
-git clone https://github.com/zerozeroha/BookList.git
-cd BookList
-```
-
-### 2️⃣ 패키지 설치
-
-```bash
-npm install
-```
-
-### 3️⃣ 개발 서버 실행
-
-```bash
-npm run dev
-```
-
-🌐 브라우저에서 `http://localhost:3000` 접속
-
 ---
 
 ## 📂 프로젝트 구조
