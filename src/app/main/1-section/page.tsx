@@ -28,7 +28,7 @@ const Title = () => {
           borderRadius: "0%",
           opacity: [1, 1, 0], // 3초 후 opacity 0
         }}
-        transition={{ duration: 1, ease: "easeInOut" }} // 5초 동안 유지 후 서서히 사라짐
+        transition={{ duration: 1, ease: "easeInOut" }}
       />
 
       {/* 로고 애니메이션 */}
@@ -44,8 +44,8 @@ const Title = () => {
             <Image
               src="/assets/logo.png"
               alt="Logo"
-              width={100}
-              height={50}
+              width={200}
+              height={150}
               priority
               className="drop-shadow-lg"
             />
@@ -55,7 +55,7 @@ const Title = () => {
       <div className="flex flex-col gap-40 justify-center items-center sm:w-[375px]">
         {/* ONLINE BOOKSTORE 3D 텍스트 애니메이션 */}
         <motion.div
-          className="absolute font-serif flex flex-col lg:text-[80px] md:text-[70px] mt-50 text-center cursor-pointer w-full"
+          className="absolute font-serif flex flex-col lg:text-[80px] md:text-[70px] mt-50 text-center cursor-pointer w-full "
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.5, ease: "easeInOut" }}
@@ -65,12 +65,13 @@ const Title = () => {
           }}
           onClick={() => window.open("#", "_blank")}
         >
-          <div className="text-center flex-col flex font-bold text-blue-700 w-full">
-            ROBOT GLOBAL TEAM
+          <div className="text-center flex-col flex font-bold text-blue-500 w-full hover:text-blue-700">
+            Robot Global Team
           </div>
           <div className="text-center flex flex-col font-bold text-blue-700 w-full">
-            ONLINE BOOK STORE
+            Online Book Store
           </div>
+          {/* <div className=" flex flex-col border-2 border-white h-50 w-20"></div> */}
         </motion.div>
       </div>
     </div>

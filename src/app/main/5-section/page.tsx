@@ -1,9 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen } from "lucide-react";
+import { Coffee } from "lucide-react";
+import { useRouter } from "next/router";
 
 const BookstoreIntro = () => {
+  const router = useRouter();
   return (
     <section className="h-screen flex flex-col items-center justify-center text-center p-4 sm:p-8 relative overflow-hidden">
       {/* 배경 이미지 */}
@@ -18,10 +20,10 @@ const BookstoreIntro = () => {
       {/* 버튼 */}
       <button
         className="group px-6 py-3 text-white hover:text-gray-400 transition flex flex-col items-center gap-4 z-10 mb-8 sm:mb-12"
-        onClick={() => (window.location.href = "/booklist")}
+        onClick={() => router.push("/booklist")}
       >
-        <span className="text-lg ">지금 탐색하기</span>
-        <BookOpen className="size-12 text-gray-100 group-hover:text-gray-400" />
+        {/* <span className="text-lg ">지금 탐색하기</span> */}
+        <Coffee className="size-12 text-gray-100 group-hover:text-gray-400" />
       </button>
 
       {/* 제목 */}

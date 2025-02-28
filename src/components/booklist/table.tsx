@@ -20,9 +20,9 @@ type BookTableProps = {
 
 export default function BookTable({ books, onDelete }: BookTableProps) {
   return (
-    <Table className="w-full">
-      <TableHeader className="w-full border-b-2 border-blue-900">
-        <TableRow className="w-full ">
+    <Table className="w-full cursor-default">
+      <TableHeader className="w-full border-y-2 border-neutral-900 bg-gray-100">
+        <TableRow className="w-full text-lg text-neutral-900">
           <TableHead className="w-1/4 text-center items-center">제목</TableHead>
           <TableHead className="w-1/4 text-center">저자</TableHead>
           <TableHead className="w-1/4 text-center">평점</TableHead>

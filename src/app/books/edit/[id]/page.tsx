@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import type { Book } from "@/types/book";
-
-import BookFormTitle from "@/components/bookform/bookform-title";
-import DisabledBookForm from "@/components/bookform/disabled-form";
+import BookForm from "@/components/bookform/book-form";
+import ChangeFormTitle from "@/components/bookform/change-title";
 
 export default function EditBook() {
   const router = useRouter();
-  const { id } = useParams() as { id: string }; // ✅ Next.js 13+에서 useParams() 사용
+  const { id } = useParams() as { id: string };
 
   const [book, setBook] = useState<Book | null>(null);
   const [loading, setLoading] = useState(true);
@@ -45,8 +44,8 @@ export default function EditBook() {
 
   return (
     <div className="container mx-auto py-6">
-      <BookFormTitle />
-      <DisabledBookForm initialData={book} id={id} />
+      <ChangeFormTitle />
+      <BookForm initialData={book} id={id} />
     </div>
   );
 }

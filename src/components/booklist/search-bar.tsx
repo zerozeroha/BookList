@@ -8,10 +8,13 @@ interface SearchBarProps {
 
 export default function SearchBar({ search, setSearch }: SearchBarProps) {
   return (
-    <div className="flex items-center mb-6 px-10">
+    <div className="flex flex-col items-center mb-6 px-10">
       {/* 🔹 왼쪽 BOOKLIST */}
-      <span className="font-black text-[38px] sm:text-[24px] text-blue-950 w-full sm:w-1/3 text-left">
+      <span className="font-black font-serif text-[32px] md:text-[60px] lg:text-[80px] text-neutral-800 w-full text-center">
         BOOKLIST
+      </span>
+      <span className=" text-[12px] font-mono md:text-[16px] lg:text-[20px] text-neutral-800 w-full text-center mb-2">
+        나에게 꼭 맞는 책을 찾아보세요
       </span>
 
       {/* 🔹 가운데 검색창 */}

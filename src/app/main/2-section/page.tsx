@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const BubbleTitle = () => {
+  const router = useRouter();
+
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center">
       {/* 배경 이미지 */}
@@ -21,18 +24,29 @@ const BubbleTitle = () => {
 
       {/* ONLINE BOOKSTORE 3D 텍스트 애니메이션 */}
       <div
-        className="font-serif flex flex-col lg:text-[80px] md:text-[70px] text-center cursor-pointer w-full"
+        className=" flex font-serif flex-col lg:text-[80px] md:text-[70px] text-left cursor-pointer w-full"
         style={{
           textShadow:
             "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
         }}
-        onClick={() => window.open("#", "_blank")}
+        onClick={() => router.push("/booklist")}
       >
-        <div className="text-center font-bold text-yellow-300 w-full">
-          ONLINE LIBRARY
+        <div className="text-left font-bold text-yellow-200 w-full ml-4 hover:text-yellow-400">
+          Explore Various Books
         </div>
-        <div className="text-center font-bold text-yellow-300 w-full">
-          INDEPENDENT BOOKSTORE
+        <div className="text-left text-[12px] md:text-base font-normal text-yellow-400 ml-8 w-[300px] md:w-[500px]">
+          Online bookstores have transcended the limitations of traditional
+          bookstores by leveraging digital technology and the internet,
+          providing readers with a more convenient reading environment.
+          Platforms such as Amazon, Kyobo Bookstore, and Yes24 offer vast book
+          selections without physical constraints, allowing readers to easily
+          find desired books through search and recommendation systems. In
+          particular, AI-based personalized recommendation systems analyze
+          readers purchasing patterns to provide tailored book suggestions,
+          enhancing the overall reading experience (Kim & Park, 2021).
+          Additionally, the rise of e-books and audiobooks has enabled readers
+          to access books anytime and anywhere via mobile devices, significantly
+          improving accessibility.
         </div>
       </div>
 

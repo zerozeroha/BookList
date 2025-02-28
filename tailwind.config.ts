@@ -11,6 +11,10 @@ export default {
     extend: {
       fontFamily: {
         didot: ["Didot", "Bodoni", "Playfair Display", "serif"],
+        myeongjo: ["Nanum Myeongjo", "Georgia", "serif"], // 감성적인 명조체
+        pen: ["Nanum Pen Script", "Cafe24 Classic", "cursive"], // 손글씨 감성
+        sans: ["Gmarket Sans", "Noto Sans KR", "Arial", "sans-serif"], // 깔끔하고 세련된 느낌
+        hanna: ["Hanna", "Cafe24 Classic", "sans-serif"], // 빈티지 감성의 손글씨
       },
       colors: {
         background: "hsl(var(--background))",

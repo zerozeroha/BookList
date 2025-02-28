@@ -1,6 +1,5 @@
 "use client";
 
-import FullPageWrapper from "@/app/fullpage/page";
 import "./globals.css";
 import Header from "@/components/ui/header/Header";
 import Footer from "@/components/ui/footer/Footer";
@@ -17,9 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <FullPageWrapper />
-        <div ref={nextSectionRef}>{children}</div>{" "}
-        {/* ✅ children이 올바르게 포함되도록 변경 */}
+        <main>{children}</main>
         <Footer nextSectionRef={nextSectionRef} />
       </body>
     </html>

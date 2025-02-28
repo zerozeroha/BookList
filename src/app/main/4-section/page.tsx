@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const FourTitle = () => {
+  const router = useRouter();
+
   return (
     <div className="relative w-full h-screen flex flex-col justify-center items-center">
       {/* 배경 이미지 */}
@@ -26,13 +29,13 @@ const FourTitle = () => {
           textShadow:
             "6px 6px 10px rgba(0,0,0,0.3), 12px 12px 15px rgba(0,0,0,0.2)",
         }}
-        onClick={() => window.open("#", "_blank")}
+        onClick={() => router.push("/booklist")}
       >
-        <div className="text-center font-bold text-red-800 w-full">
-          THE ONLY WAY TO DO GREAT WORK
+        <div className="text-center font-bold text-red-700 w-full hover:text-red-800 ">
+          The Only way To Go Great Work Is
         </div>
         <div className="text-center font-bold text-red-800 w-full">
-          IS TO LOVE WHAT YOU DO.
+          To Love What You Do.
         </div>
       </div>
 
