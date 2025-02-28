@@ -9,7 +9,7 @@ const BubbleTitle = () => {
   const router = useRouter();
 
   return (
-    <div className="relative w-full h-screen flex flex-col justify-center items-center">
+    <div className="relative w-full h-screen overflow-hidden flex flex-col justify-center items-center">
       {/* 배경 이미지 */}
       <div className="absolute inset-0 -z-10">
         <Image

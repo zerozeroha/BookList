@@ -1,18 +1,20 @@
 import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { mockBooks } from "@/lib/mock-data";
 import type { BookInput } from "@/types/book";
 
-// 메모리에 데이터 저장
+// 메모리에 저장된 책 데이터
 const books = [...mockBooks];
 
+// ✅ GET 요청 (페이징 지원)
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
-  const page = Number.parseInt(searchParams.get("page") || "1");
+  const page = Number(searchParams.get("page") || "1");
   const limit = 10;
   const start = (page - 1) * limit;
   const end = start + limit;
 
-  return Response.json({
+  return NextResponse.json({
     books: books.slice(start, end),
     total: books.length,
     page,
@@ -20,6 +22,7 @@ export async function GET(request: NextRequest) {
   });
 }
 
+// ✅ POST 요청 (새로운 책 추가)
 export async function POST(request: NextRequest) {
   const body: BookInput = await request.json();
 
@@ -31,5 +34,5 @@ export async function POST(request: NextRequest) {
   };
 
   books.push(newBook);
-  return Response.json(newBook, { status: 201 });
+  return NextResponse.json(newBook, { status: 201 });
 }

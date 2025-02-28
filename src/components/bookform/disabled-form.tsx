@@ -135,13 +135,13 @@ export default function DisabledBookForm({ initialData, id }: BookFormProps) {
             variant="outline"
             type="button"
             onClick={() => router.back()}
-            className="px-4 py-2 border border-slate-700 text-neutral-900 rounded-md hover:bg-pink-500 hover:text-white transition-colors"
+            className="px-4 py-2 border border-slate-700 text-neutral-900 rounded-md hover:bg-opacity-80 transition-colors"
           >
             취소
           </Button>
           <Button
             type="submit"
-            className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-pink-600 transition-colors"
+            className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-slate-700 transition-colors"
             onClick={() => router.push(`/books/edit/${id}`)}
           >
             수정

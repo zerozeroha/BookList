@@ -43,7 +43,7 @@ export default function EditBook() {
   if (!book) return <div>책을 찾을 수 없습니다.</div>; // 책 데이터가 없을 경우
 
   return (
-    <div className="container mx-auto py-6">
+    <div className="container mx-auto py-6 bg-green-400 h-[1000px]">
       <ChangeFormTitle />
       <BookForm initialData={book} id={id} />
     </div>

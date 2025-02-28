@@ -65,13 +65,12 @@ const Title = () => {
           }}
           onClick={() => window.open("#", "_blank")}
         >
-          <div className="text-center flex-col flex font-bold text-blue-500 w-full hover:text-blue-700">
+          <div className="text-center flex-col flex font-bold text-blue-600 w-full hover:text-blue-800">
             Robot Global Team
           </div>
-          <div className="text-center flex flex-col font-bold text-blue-700 w-full">
+          <div className="text-center flex flex-col font-bold text-blue-800 w-full">
             Online Book Store
           </div>
-          {/* <div className=" flex flex-col border-2 border-white h-50 w-20"></div> */}
         </motion.div>
       </div>
     </div>

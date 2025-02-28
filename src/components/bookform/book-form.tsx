@@ -54,7 +54,7 @@ export default function BookForm({ initialData, id }: BookFormProps) {
     <Card className="max-w-4xl mx-auto bg-[#ffffff] shadow-md rounded-lg p-6">
       <CardHeader className="mb-4">
         <CardTitle
-          className="text-3xl font-mono text-neutral-900"
+          className="text-3xl font-serif text-neutral-900 border-b border-neutral-300"
           style={{
             textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
           }}
@@ -141,13 +141,13 @@ export default function BookForm({ initialData, id }: BookFormProps) {
             variant="outline"
             type="button"
             onClick={() => router.back()}
-            className="px-4 py-2 border border-slate-700 text-neutral-900 rounded-md hover:bg-pink-500 hover:text-white transition-colors"
+            className="px-4 py-2 border border-slate-700 text-neutral-900 rounded-md hover:bg-opacity-80 transition-colors"
           >
             취소
           </Button>
           <Button
             type="submit"
-            className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-pink-600 transition-colors"
+            className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-opacity-80 transition-colors"
           >
             저장
           </Button>

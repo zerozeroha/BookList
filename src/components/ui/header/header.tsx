@@ -4,18 +4,15 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { label: "Booklist", href: "/booklist" },
   { label: "Newbook", href: "/books/new" },
-  { label: "Business Corporation", href: "/business" },
-  { label: "About", href: "/about", hasDropdown: true },
 ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -76,42 +73,15 @@ export default function Header() {
 
             {/* 네비게이션 메뉴 */}
             <nav className="mt-8 space-y-4">
-              {navItems.map(({ label, href, hasDropdown }) => (
-                <div key={href}>
-                  <Link
-                    href={href}
-                    className="block text-gray-700 hover:bg-gray-100 py-2 px-2 rounded-md"
-                    onClick={() =>
-                      hasDropdown && setDropdownOpen(!dropdownOpen)
-                    }
-                  >
-                    <div className="flex justify-between items-center">
-                      {label}
-                      {hasDropdown && (
-                        <ChevronDown
-                          size={16}
-                          className={dropdownOpen ? "rotate-180" : ""}
-                        />
-                      )}
-                    </div>
-                  </Link>
-                  {hasDropdown && dropdownOpen && (
-                    <div className="ml-4 mt-2 text-gray-600 space-y-2">
-                      <Link
-                        href="/about/team"
-                        className="block hover:text-[#112D64]"
-                      >
-                        Team
-                      </Link>
-                      <Link
-                        href="/about/careers"
-                        className="block hover:text-[#112D64]"
-                      >
-                        Careers
-                      </Link>
-                    </div>
-                  )}
-                </div>
+              {navItems.map(({ label, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="block text-gray-700 hover:bg-gray-100 py-2 px-2 rounded-md"
+                  onClick={() => setIsOpen(false)} // 메뉴 클릭 시 닫기
+                >
+                  {label}
+                </Link>
               ))}
             </nav>
           </div>

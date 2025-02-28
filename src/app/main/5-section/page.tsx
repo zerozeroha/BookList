@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Coffee } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const BookstoreIntro = () => {
   const router = useRouter();
