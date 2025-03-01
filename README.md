@@ -43,7 +43,7 @@
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gtpN-hFdpLw" frameborder="0" allowfullscreen></iframe>
+[![Video](https://img.youtube.com/vi/gtpN-hFdpLw/0.jpg)](https://youtu.be/gtpN-hFdpLw)
 
 
 ---
