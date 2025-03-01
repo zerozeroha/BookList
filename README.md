@@ -41,7 +41,7 @@
 ![newbook](https://github.com/user-attachments/assets/942e0249-165f-44c3-9c45-53e3994166b6)
 
 
-
+- 썸네일 클릭해서 영상보러 가기
 
 [![Video](https://img.youtube.com/vi/gtpN-hFdpLw/0.jpg)](https://youtu.be/gtpN-hFdpLw)
 
