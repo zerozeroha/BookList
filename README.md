@@ -1,5 +1,9 @@
 # RGT_Frontend_KimHaYoung_2025
 
+책 목록 페이지 구현
+
+# RGT_Frontend_KimHaYoung_2025
+
 📚 **책 목록 관리 프로젝트**
 
 ## 📌 소개
@@ -17,6 +21,7 @@
 ## 🛠️ 사용 기술 스택
 
 ### **프론트엔드**
+
 - **Next.js 15** - React 기반 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG) 지원
 - **TypeScript** - 안정적인 개발을 위한 정적 타입 언어
 - **Tailwind CSS** - 유틸리티 퍼스트 CSS 프레임워크
@@ -25,6 +30,7 @@
 - **ShadCN UI** - 접근성이 뛰어난 모던 UI 컴포넌트 사용
 
 ### **UI 라이브러리 및 디자인**
+
 - **ShadCN UI**: `Button`, `Card`, `Input`, `Textarea` 등의 UI 컴포넌트 활용
 - **Lucide Icons**: 메뉴 아이콘, 닫기 버튼, 네비게이션 아이콘 등
 - **Framer Motion**: 페이지 및 버튼 애니메이션 효과 적용
@@ -37,16 +43,15 @@
 
 ## 🚀 ** 화면 구상 **
 
-
-
-
 ![newbook](https://github.com/user-attachments/assets/942e0249-165f-44c3-9c45-53e3994166b6)
-
 
 - 썸네일 클릭해서 영상보러 가기
 
 [![Video](https://img.youtube.com/vi/gtpN-hFdpLw/0.jpg)](https://youtu.be/gtpN-hFdpLw)
 
+## 화면 기록 예시
+
+![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/output.gif)
 
 ---
 
@@ -68,14 +73,10 @@
 
 ## 🔗 API 엔드포인트
 
-| HTTP Method | Endpoint             | Description              |
-|------------|----------------------|--------------------------|
-| **GET**    | `/api/books`         | 책 목록 조회             |
-| **POST**   | `/api/books`         | 새로운 책 추가           |
-| **GET**    | `/api/books/[id]`    | 특정 책 정보 조회        |
-| **PUT**    | `/api/books/[id]`    | 특정 책 정보 수정        |
-| **DELETE** | `/api/books/[id]`    | 특정 책 삭제             |
-
-
-
-
+| HTTP Method | Endpoint          | Description       |
+| ----------- | ----------------- | ----------------- |
+| **GET**     | `/api/books`      | 책 목록 조회      |
+| **POST**    | `/api/books`      | 새로운 책 추가    |
+| **GET**     | `/api/books/[id]` | 특정 책 정보 조회 |
+| **PUT**     | `/api/books/[id]` | 특정 책 정보 수정 |
+| **DELETE**  | `/api/books/[id]` | 특정 책 삭제      |
