@@ -70,3 +70,10 @@
 | **GET**     | `/api/books/[id]` | 특정 책 정보 조회 |
 | **PUT**     | `/api/books/[id]` | 특정 책 정보 수정 |
 | **DELETE**  | `/api/books/[id]` | 특정 책 삭제      |
+
+
+---
+
+## 🚀 ** 화면 구상 **
+
+[YouTube 영상 보기](https://www.youtube.com/watch?v=gtpN-hFdpLw)
