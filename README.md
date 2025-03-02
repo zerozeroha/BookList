@@ -64,13 +64,15 @@
 
 ![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/output.gif)
 
+## 태블릿 화면 기록
+
+![Tablet Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/tablet_record_half.gif)
+
 ## 모바일 화면 기록
 
 ![Mobile Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/mobile_record_half.gif)
 
-## 태블릿 화면 기록
 
-![Tablet Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/tablet_record_half.gif)
 
 ---
 
