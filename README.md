@@ -1,4 +1,3 @@
-
 # RGT_Frontend_KimHaYoung_2025
 
 📚 **책 목록 관리 프로젝트**
@@ -6,6 +5,16 @@
 ## 📌 소개
 
 이 프로젝트는 **Next.js 15**, **TypeScript**, **Tailwind CSS**를 기반으로 한 **책 목록 관리 웹 애플리케이션**입니다. 사용자는 책을 **추가, 수정, 삭제**할 수 있으며, **책 상세 정보**를 확인할 수 있습니다.
+
+---
+
+## 🎯 **개발 목표**
+
+✅ **사용자 경험(UX) 최적화**
+✅ **빠르고 직관적인 인터페이스 구축**
+✅ **최신 프론트엔드 기술 적극 활용**
+
+---
 
 ## 🎯 주요 기능
 
@@ -15,53 +24,59 @@
 - ✅ **책 삭제**: 책을 목록에서 제거
 - ✅ **책 상세 보기**: 개별 책의 정보 확인
 
-## 🛠️ 사용 기술 스택
+---
 
-### **프론트엔드**
+## 🛠️ **기술 스택**
 
-- **Next.js 15** - React 기반 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG) 지원
-- **TypeScript** - 안정적인 개발을 위한 정적 타입 언어
-- **Tailwind CSS** - 유틸리티 퍼스트 CSS 프레임워크
-- **Framer Motion** - 부드러운 애니메이션 및 UI 인터랙션 구현
-- **Lucide Icons** - 가벼운 아이콘 라이브러리
-- **ShadCN UI** - 접근성이 뛰어난 모던 UI 컴포넌트 사용
+### 🚀 **프론트엔드 핵심**
 
-### **UI 라이브러리 및 디자인**
+| 기술              | 설명                                       |
+| ----------------- | ------------------------------------------ |
+| **Next.js 15**    | 최신 React 기반 프레임워크, SSR & SSG 지원 |
+| **TypeScript**    | 안정적인 정적 타입 시스템 도입             |
+| **Tailwind CSS**  | 빠르고 효율적인 스타일링                   |
+| **SWR**           | React 기반 데이터 패칭 최적화              |
+| **Framer Motion** | 부드러운 애니메이션 효과 구현              |
 
-- **ShadCN UI**: `Button`, `Card`, `Input`, `Textarea` 등의 UI 컴포넌트 활용
-- **Lucide Icons**: 메뉴 아이콘, 닫기 버튼, 네비게이션 아이콘 등
-- **Framer Motion**: 페이지 및 버튼 애니메이션 효과 적용
-- **Tailwind CSS**:
-  - **반응형 디자인 지원**: `grid`, `flex`, `w-full`, `h-screen` 활용
-  - **다크 모드 고려**: `bg-opacity`, `hover:opacity` 적용
-  - **트렌디한 색상 팔레트 적용** (예: `text-[#112D64]`, `bg-pink-500`, `hover:text-yellow-400` 등)
+### 🎨 **UI & 애니메이션**
+
+| 라이브러리        | 설명                          |
+| ----------------- | ----------------------------- |
+| **ShadCN UI**     | Radix 기반의 모던 UI 컴포넌트 |
+| **Lucide Icons**  | 가벼운 SVG 아이콘 컬렉션      |
+| **Framer Motion** | 페이지 전환, 요소 애니메이션  |
 
 ---
 
-## 🚀 ** 화면 구상 **
+## 🎨 **UI & 디자인 특징**
 
-
-![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/output.gif)
-
----
-
-## 📂 프로젝트 구조
-
-```
-📦 src
- ┣ 📂app
- ┃ ┣ 📂api/books        # API 라우트 (전체 책 목록)
- ┃ ┣ 📂api/books/[id]   # 개별 책 조회, 수정, 삭제
- ┃ ┣ 📂books            # 클라이언트 사이드 페이지
- ┣ 📂components         # UI 컴포넌트 (Header, BookForm 등)
- ┣ 📂lib                # mock 데이터 및 유틸리티
- ┣ 📂types              # TypeScript 인터페이스 정의
- ┣ 📂public/assets      # 프로젝트 로고 및 이미지
-```
+✅ **미니멀리즘 & 트렌디한 디자인 적용**
+✅ **Tailwind CSS 기반 반응형 레이아웃** (`flex`, `grid`, `w-full`)
+✅ **ShadCN UI의 세련된 버튼 & 카드 UI 활용**
+✅ **다크 모드 지원** (`dark:bg-gray-900`, `text-white`)
+✅ **모션 기반 UX 향상** (`framer-motion`으로 부드러운 인터랙션 추가)
 
 ---
 
-## 🔗 API 엔드포인트
+## 🚀 **화면 구상**
+
+## PC 화면 기록
+
+![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/output.gif)
+
+## 모바일 화면 기록
+
+![Mobile Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/mobile_record.gif)
+
+## 태블릿 화면 기록
+
+![Tablet Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/tablet_record.gif)
+
+---
+
+## 📂 **프로젝트 구조**
+
+## 🔗 **API 엔드포인트**
 
 | HTTP Method | Endpoint          | Description       |
 | ----------- | ----------------- | ----------------- |
@@ -71,9 +86,42 @@
 | **PUT**     | `/api/books/[id]` | 특정 책 정보 수정 |
 | **DELETE**  | `/api/books/[id]` | 특정 책 삭제      |
 
+---
+
+## 🎬 **데모 영상**
+
+[📺 YouTube 영상 보기](https://www.youtube.com/watch?v=gtpN-hFdpLw)
 
 ---
 
-## 🚀 ** 화면 구상 **
+## 📦 **설치된 라이브러리**
 
-[YouTube 영상 보기](https://www.youtube.com/watch?v=gtpN-hFdpLw)
+📌 **최신 프론트엔드 트렌드를 반영한 라이브러리들!**
+
+### 🚀 **기본 프레임워크 & 상태 관리**
+
+- **Next.js 15** → 최신 React 기반 프레임워크
+- **TypeScript** → 안정적인 정적 타입 시스템
+- **SWR** → React 데이터 패칭 최적화
+
+### 🎨 **UI & 스타일링**
+
+- **Tailwind CSS** → 유틸리티 기반 스타일링
+- **ShadCN UI** → Radix 기반 UI 컴포넌트 (Button, Card, Input 등)
+- **Lucide Icons** → 심플하고 세련된 아이콘 컬렉션
+
+### 🎢 **애니메이션 & UX**
+
+- **Framer Motion** → 부드러운 인터랙션과 트랜지션 제공
+
+### 🛠️ **개발 생산성 도구**
+
+- **ESLint & Prettier** → 코드 스타일 관리
+- **PostCSS** → CSS 후처리 및 최적화
+- **TypeScript 타입 정의** → (`@types/react`, `@types/node`)
+
+## 🎨 **UI & 반응형 디자인**
+
+✅ **모바일 퍼스트 디자인 적용** (`sm:`, `md:`, `lg:`, `xl:`)
+✅ **반응형 그리드 & 플렉스 레이아웃** (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`)
+✅ **모션 기반 UX 향상** (`framer-motion`으로 부드러운 인터랙션 추가)
