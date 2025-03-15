@@ -1,38 +1,54 @@
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { NextRequest, NextResponse } from "next/server";
 import { mockBooks } from "@/lib/mock-data";
-import type { BookInput } from "@/types/book";
 
-// 메모리에 저장된 책 데이터
-const books = [...mockBooks];
-
-// ✅ GET 요청 (페이징 지원)
-export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const page = Number(searchParams.get("page") || "1");
-  const limit = 10;
-  const start = (page - 1) * limit;
-  const end = start + limit;
-
-  return NextResponse.json({
-    books: books.slice(start, end),
-    total: books.length,
-    page,
-    totalPages: Math.ceil(books.length / limit),
-  });
+// GET: 모든 책 조회
+export function GET() {
+  try {
+    return NextResponse.json(
+      { message: "success", books: mockBooks },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      { message: "fail to retrieve books" },
+      { status: 500 }
+    );
+  }
 }
 
-// ✅ POST 요청 (새로운 책 추가)
-export async function POST(request: NextRequest) {
-  const body: BookInput = await request.json();
+// POST: 새 책 추가
+export function POST(request: NextRequest) {
+  try {
+    return request.json().then((body) => {
+      if (!body.title || !body.author || !body.description) {
+        return NextResponse.json(
+          { error: "모든 필수 정보를 입력하세요." },
+          { status: 400 }
+        );
+      }
 
-  const newBook = {
-    id: Date.now().toString(),
-    ...body,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  };
+      const newBook = {
+        id: String(mockBooks.length + 1),
+        title: body.title,
+        author: body.author,
+        description: body.description,
+        rating: body.rating || 0,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
 
-  books.push(newBook);
-  return NextResponse.json(newBook, { status: 201 });
+      mockBooks.push(newBook);
+
+      return NextResponse.json(
+        { message: "책이 추가되었습니다.", book: newBook },
+        { status: 201 }
+      );
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { message: "fail to create book" },
+      { status: 500 }
+    );
+  }
 }
