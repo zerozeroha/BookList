@@ -1,4 +1,4 @@
-# RGT_Frontend_KimHaYoung_2025
+# BookList
 
 📚 **책 목록 관리 프로젝트**
 
@@ -57,21 +57,6 @@
 ✅ **모션 기반 UX 향상** (`framer-motion`으로 부드러운 인터랙션 추가)
 
 ---
-
-## 🚀 **화면 구상**
-
-## PC 화면 기록
-
-![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/output.gif)
-
-## 태블릿 화면 기록
-
-![Tablet Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/tablet_record_half.gif)
-
-## 모바일 화면 기록
-
-![Mobile Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/mobile_record_half.gif)
-
 
 
 ---
