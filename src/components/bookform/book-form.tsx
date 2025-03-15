@@ -32,8 +32,11 @@ export default function BookForm({ initialData, id }: BookFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const response = await fetch(id ? `/api/books/${id}` : "/api/books", {
-      method: id ? "PUT" : "POST",
+    const url = id ? `/api/books/${id}` : "/api/books";
+    const method = id ? "PUT" : "POST";
+
+    const response = await fetch(url, {
+      method,
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
@@ -47,7 +50,11 @@ export default function BookForm({ initialData, id }: BookFormProps) {
   const handleChange =
     (field: keyof typeof formData) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData((prev) => ({ ...prev, [field]: e.target.value }));
+      const value =
+        field === "rating"
+          ? Number(e.target.value) || undefined
+          : e.target.value;
+      setFormData((prev) => ({ ...prev, [field]: value }));
     };
 
   return (
@@ -77,7 +84,6 @@ export default function BookForm({ initialData, id }: BookFormProps) {
                 value={formData.title}
                 onChange={handleChange("title")}
                 required
-                className="mt-1 p-3 border border-slate-200 rounded-md focus:bg-slate-50 focus:border-slate-700"
               />
             </div>
             <div>
@@ -92,7 +98,6 @@ export default function BookForm({ initialData, id }: BookFormProps) {
                 value={formData.author}
                 onChange={handleChange("author")}
                 required
-                className="mt-1 p-3 border border-slate-200 rounded-md focus:bg-slate-50 focus:border-slate-700"
               />
             </div>
             <div>
@@ -107,14 +112,8 @@ export default function BookForm({ initialData, id }: BookFormProps) {
                 type="number"
                 min="1"
                 max="5"
-                value={formData.rating || ""}
-                onChange={(e) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    rating: Number(e.target.value) || undefined,
-                  }))
-                }
-                className="mt-1 p-3 border border-slate-200 rounded-md focus:bg-slate-50 focus:border-slate-700"
+                value={formData.rating !== undefined ? formData.rating : ""}
+                onChange={handleChange("rating")}
               />
             </div>
           </div>
@@ -131,24 +130,16 @@ export default function BookForm({ initialData, id }: BookFormProps) {
                 value={formData.description}
                 onChange={handleChange("description")}
                 required
-                className="mt-1 p-3 border border-slate-200 rounded-md focus:bg-slate-50 focus:border-slate-700 h-[220px]"
+                className="h-[220px]"
               />
             </div>
           </div>
         </CardContent>
         <CardFooter className="flex justify-end gap-4 mt-6">
-          <Button
-            variant="outline"
-            type="button"
-            onClick={() => router.back()}
-            className="px-4 py-2 border border-slate-700 text-neutral-900 rounded-md hover:bg-opacity-80 transition-colors"
-          >
+          <Button variant="outline" type="button" onClick={() => router.back()}>
             취소
           </Button>
-          <Button
-            type="submit"
-            className="px-4 py-2 bg-slate-500 text-white rounded-md hover:bg-opacity-80 transition-colors"
-          >
+          <Button type="submit" className="bg-slate-500 text-white">
             저장
           </Button>
         </CardFooter>

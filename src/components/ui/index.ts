@@ -12,4 +12,11 @@ export {
   TableRow,
 } from "./Table";
 export { Textarea } from "./Textarea";
-export { Pagination } from "./Pagination";
+export {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "./Pagination";

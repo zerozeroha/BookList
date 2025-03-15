@@ -11,7 +11,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/Pagination";
+} from "@/components/ui/index";
 
 const ITEMS_PER_PAGE = 10; // ✅ 한 페이지에 표시할 개수
 

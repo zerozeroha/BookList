@@ -1,8 +1,8 @@
 "use client";
 
 import "./globals.css";
-import Header from "@/components/ui/header/Header";
 import Footer from "@/components/ui/footer/Footer";
+import Header from "@/components/ui/header/Header";
 import { useRef } from "react";
 
 export default function RootLayout({

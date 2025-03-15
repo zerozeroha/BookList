@@ -23,8 +23,8 @@ export default function Header() {
           <Image
             src="/assets/logo.png"
             alt="RGT Logo"
-            width={80}
-            height={30}
+            width={100}
+            height={50}
             priority
           />
         </Link>
