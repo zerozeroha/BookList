@@ -66,7 +66,7 @@ const Title = () => {
           onClick={() => window.open("#", "_blank")}
         >
           <div className="text-center flex-col flex font-bold text-blue-600 w-full hover:text-blue-800">
-            Robot Global Team
+            GLOBAL
           </div>
           <div className="text-center flex flex-col font-bold text-blue-800 w-full">
             Online Book Store

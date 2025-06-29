@@ -4,7 +4,8 @@
 
 ## 📌 소개
 
-이 프로젝트는 **Next.js 15**, **TypeScript**, **Tailwind CSS**를 기반으로 한 **책 목록 관리 웹 애플리케이션**입니다. 사용자는 책을 **추가, 수정, 삭제**할 수 있으며, **책 상세 정보**를 확인할 수 있습니다.
+이 프로젝트는 **Next.js 15**, **TypeScript**, **Tailwind CSS**를 기반으로 한 **책 목록 관리 웹 애플리케이션**입니다. 
+사용자는 책을 **추가, 수정, 삭제**할 수 있으며, **책 상세 정보**를 확인할 수 있습니다.
 
 ---
 
@@ -58,6 +59,24 @@
 
 ---
 
+<<<<<<< HEAD
+=======
+## 🚀 **화면 구상**
+
+<!-- ## PC 화면 기록
+
+![Screen Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/output.gif)
+
+## 태블릿 화면 기록
+
+![Tablet Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/tablet_record_half.gif)
+
+## 모바일 화면 기록
+
+![Mobile Record GIF](https://github.com/zerozeroha/BookList/blob/main/public/assets/mobile_record_half.gif) -->
+
+
+>>>>>>> 7abd6b3 (수정)
 
 ---
 
@@ -68,16 +87,16 @@
 | HTTP Method | Endpoint          | Description       |
 | ----------- | ----------------- | ----------------- |
 | **GET**     | `/api/books`      | 책 목록 조회      |
-| **POST**    | `/api/books`      | 새로운 책 추가    |
+| **POST**    | `/api/books/[id]` | 새로운 책 추가    |
 | **GET**     | `/api/books/[id]` | 특정 책 정보 조회 |
 | **PUT**     | `/api/books/[id]` | 특정 책 정보 수정 |
 | **DELETE**  | `/api/books/[id]` | 특정 책 삭제      |
 
 ---
-
+<!-- 
 ## 🎬 **데모 영상**
 
-[📺 YouTube 영상 보기](https://www.youtube.com/watch?v=gtpN-hFdpLw)
+[📺 YouTube 영상 보기](https://www.youtube.com/watch?v=gtpN-hFdpLw) -->
 
 ---
 
